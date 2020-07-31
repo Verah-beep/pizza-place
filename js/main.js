@@ -70,16 +70,14 @@ function deliver(){
   
 }
 function locationValidate(){
-  var checkBox=$("input#delivery").val();
   var location = $("input#location").val();
   var telephone = $("input#tel").val();
-  if (checkBox.checked==true&&(location==""||telephone=="")){
+  if (location==""||telephone==""){
       alert("enter valid details");
     }
   else{
-    message();
+    alert("Your delivery is enroute. Thank you for shopping at Pizza Place.") 
     finish();
-    
   }
 
 }
@@ -87,12 +85,14 @@ function locationValidate(){
 function message(){
   
   var checkBox = document.getElementById("delivery");
-  if (checkBox.checked == true){
-    alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
-  }
   if(checkBox.checked == false){
     alert("Thank you for shopping at Pizza Place.");
+    finish();
   }
+  if (checkBox.checked == true){
+    locationValidate();
+  }
+  
 }
 function finish(){
         resetFields();
