@@ -34,25 +34,27 @@ function totalPrice(){
     var large=1200;
     var regular=900;
     var small=500;
-    var big=document.getElementById("pizza-size").value;
+    var size=document.getElementById("pizza-size").value;
     var pizzaQty=parseInt(document.getElementById("quantity").value);
     var toppingQty=parseInt(document.getElementById("toppingQty").value);
      
-    if (big="large"){
-        total=(large*pizzaQty)+((large/10)*toppingQty);
-        document.getElementById("all").value="total:"+total;    
-        return false;
-    }
-    else if(big="regular"){
-        total=(regular*pizzaQty)+((regular/10)*toppingQty);
-        document.getElementById("all").value=" total:"+total;
-        return false;
-    }
-    else{
+    
+  if(size="small"){
         total=(small*pizzaQty)+((small/10)*toppingQty);
         document.getElementById("all").value=" total:"+total;
         return false;
     }
+    
+  if(size="regular"){
+      total=(regular*pizzaQty)+((regular/10)*toppingQty);
+      document.getElementById("all").value=" total:"+total;
+      return false;
+  }
+  if (size="large"){
+    total=(large*pizzaQty)+((large/10)*toppingQty);
+    document.getElementById("all").value="total:"+total;    
+    return false;
+}
 }
 function deliver(){
   var checkBox = document.getElementById("delivery");
@@ -107,7 +109,6 @@ $(document).ready(function() {
     $("form#new-pizza").submit(function(event) {
       event.preventDefault();
       validate();
-      $('#tocart').attr('disabled', true);
   
       var inputtedType = $("select#pizza-type").val();
       var inputtedQty = $("input#quantity").val();
@@ -140,14 +141,6 @@ $(document).ready(function() {
       });  
   
   });
-
-  $(document).ready(function() {
-    $('#complete').on('click',function(){
-      $('#tocart').attr('disabled', false);
-    });
-  });
-  
-
 
   //hover effect 
 
