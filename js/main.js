@@ -16,7 +16,7 @@ function resetFields(){
     $("select#pizza-crust").val("");
     $("select#pizza-topping").val("");
     $("input#toppingQty").val("");
-    $("input#delivery").val("");
+    document.getElementById("delivery").checked = false;
     
       }
 function validate(){
