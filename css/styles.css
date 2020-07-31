@@ -184,6 +184,8 @@ body{
     font-size: 18px;
     font-family: monospace;
     color: black;
+    resize: none;
+    height: 30px;
 }
 
 #complete{

@@ -11,11 +11,21 @@ function Pizza(type,quantity,size,crust,topping,topqty){
 
 function resetFields(){
     $("select#pizza-type").val("");
-    $("select#quantity").val("");
+    $("input#quantity").val("");
     $("select#pizza-size").val("");
     $("select#pizza-crust").val("");
     $("select#pizza-topping").val("");
+    $("input#toppingQty").val("");
+    
       }
+function validate(){
+  var inputtedType = $("select#pizza-type").val();
+      var inputtedQty = $("input#quantity").val();
+  if(inputtedType==""|| inputtedQty==""){
+    alert("invalid input!");
+    
+  }
+}
 
 function totalPrice(){
     var large=1200;
@@ -70,6 +80,7 @@ function message(){
 $(document).ready(function() {
     $("form#new-pizza").submit(function(event) {
       event.preventDefault();
+      validate();
   
       var inputtedType = $("select#pizza-type").val();
       var inputtedQty = $("input#quantity").val();
@@ -89,13 +100,14 @@ $(document).ready(function() {
                             "<li><span class='order'>" +"QUANTITY:"+ newPizza.toppingQty+ "</span></li>",
                             );
       
-      resetFields();
+      
       
     });
     $("#checkout").click(function() {
+        
         $(".cart").show();
         $(".final").show();
-
+       
         
         
       });  
@@ -104,6 +116,12 @@ $(document).ready(function() {
     $("#complete").click(function(event) {
       event.preventDefault();
       message();
+      resetFields();
+      $('ul#order li').remove();
+      $(".cart").hide();
+      $(".final").hide();
+      $(".location").hide();
+      
     });
   });
   //hover effect 
