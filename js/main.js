@@ -75,7 +75,7 @@ function locationValidate(){
   if (location==""||telephone==""){
       alert("enter valid details");
     }
-  else{
+  if(location!==""&&telephone!==""){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.") 
     finish();
   }
