@@ -59,7 +59,7 @@ body{
 .cart{
     border-style: solid;
     border-radius: 10px;
-    background-color: skyblue;
+    background-color: rgb(135, 206, 235,0.5);
     text-align: center;
     display: none;
 }
@@ -69,6 +69,17 @@ body{
     text-align: left;
     display: block;
 
+}
+.location{
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(135, 206, 235,0.5);
+    display: none;
+    text-align: center;
+}
+.location h4{
+    font-weight: bold;
+    text-align: center;
 }
 #new-pizza{
     background-image: url(../img/pizza2.jpg);
@@ -156,12 +167,20 @@ body{
     font-weight: bold;
 }
 #checkout{
-    background-color: #ff3c00;
+   
     width: 200px;
     height: 50px;
     font-weight: bold;
-    border-color: #ff3c00;
+  
 
+}
+.final{text-align: center;
+        display: none;}
+#complete{
+    background-color: #ff3c00;
+    border-color:  #ff3c00;
+    width:200px;
+    height:50px;
 }
 .callOrder{
     background-color: green;

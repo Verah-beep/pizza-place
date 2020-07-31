@@ -191,15 +191,15 @@
                         <option value="Cheese pizza">Cheese pizza</option>
                         <option value="Neapolitan pizza">Cheese pizza</option>
                         <option value="californian pizza">Cheese pizza</option>
-                    </select>
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" class="form-control" id="quantity" name="quantity" value="1"min="1" max="20">    
+                    </select>    
                     <label for="pizza-size">Size of pizza:</label>
                     <select class="form-control" name="pizza-size" id="pizza-size">
-                        <option value="Large">Large @1200</option>
-                        <option value="Regular">Regular @900</option>
-                        <option value="Small">Small @500</option>
+                        <option value="large">Large @1200</option>
+                        <option value="regular">Regular @900</option>
+                        <option value="small">Small @500</option>
                     </select>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" value="1"min="1" max="20">
                     <label for="pizza-crust">Type of crust:</label>
                     <select class="form-control" name="Pizza-crust" id="pizza-crust">
                         <option value="Thin crust">Thin crust</option>
@@ -219,17 +219,33 @@
 
                       
                     <button id="tocart" type="submit"  class="btn btn-success">add to cart</button>
-                    <input id="checkout"type="button" class="btn btn-success" value="Checkout" onclick="">
+                    <input id="checkout"type="button" class="btn btn-primary" value="view cart" onclick="totalPrice();">
                 </div>
                 </div>
                 <div class="col-md-6">
                     <div class="cart">
-                        <h3>Your Order:</h3>
+                        <h3><u>Your Order:</u></h3>
                         <ul id="order">
                             
                         </ul>
+                        <textarea name="total" id="all" ></textarea><br>
+                        <input type="checkbox" id="delivery" name="delivery" onclick="deliver();">
+                        <label for="delivery"> Have it delivered?</label><br>
+                    </div>
+                    <div class="location">
+                        <h4>Enter details</h4>
+                        <label for="Location">Location:</label>
+                        <input type="text" placeholder="Nairobi">
+                        <br>
+                        <label for="Tel">Telephone:</label>
+                        <input type="tel" placeholder="+254.."><br>
+                        
+                    </div>
+                    <div class="final">
+                    <input id="complete"type="button" class="btn btn-success" value="CHECKOUT">
                     </div>
                 </div>
+
             </div>
         </form>
         <div id="contacts">

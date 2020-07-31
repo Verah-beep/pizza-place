@@ -18,22 +18,38 @@ function resetFields(){
       }
 
 function totalPrice(){
-    var large=1200.00;
-    var regular=900.00;
-    var small=500.00;
+    var large=1200;
+    var regular=900;
+    var small=500;
     var size=document.getElementById("pizza-size").value;
     var pizzaQty=parseInt(document.getElementById("quantity").value);
     var toppingQty=parseInt(document.getElementById("toppingQty").value);
-      
-        if(size="large"){
-          total=(large*pizzaQty)+((large/10)*toppingQty);
-        }
-        else if(size="regular"){
-          total=(regular*pizzaQty)+((large/10)*toppingQty);
-        }
-        else if(size="small"){
-          total=(small*pizzaQty)+((small/10)*toppingQty);
-        }
+     
+    if (size="large"){
+        total=(large*pizzaQty)+((large/10)*toppingQty);
+        document.getElementById("all").value="total:"+total;    
+        return false;
+    }
+    else if(size="regular"){
+        total=(regular*pizzaQty)+((regular/10)*toppingQty);
+        document.getElementById("all").value=" total:"+total;
+        return false;
+    }
+    else{
+        total=(small*pizzaQty)+((small/10)*toppingQty);
+        document.getElementById("all").value=" total:"+total;
+        return false;
+    }
+}
+function deliver(){
+  var checkBox = document.getElementById("delivery");
+  var deliver=250+total;
+  if (checkBox.checked == true){
+    $("ul#order").append("<li><span class='order'>" +"DELIVERY:250/="+"</span></li>");
+    document.getElementById("all").value="Grand total:"+deliver;
+    $(".location").show();  
+  }
+  
 }
 
 //user logic
@@ -64,7 +80,9 @@ $(document).ready(function() {
     });
     $("#checkout").click(function() {
         $(".cart").show();
-  
+        $(".final").show();
+
+        
         
       });  
   });
