@@ -1,0 +1,198 @@
+body{
+    background-image: url(../img/bg.jpeg);
+   
+
+}
+
+.navBar{
+    background-color: rgb(20, 20, 20);
+    height: fit-content;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.navBar ul{
+   
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.navBar li{ 
+    color:white;
+    display: inline-block;
+    margin: 0 20px;
+    border-radius: 5px;
+    font-weight: bold; 
+}
+.navBar li:hover{
+    background-color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    color: black;
+}
+#logo{
+    width: 120px;
+    height: 100px;
+    
+}
+.jumbotron{
+    background-image: url(../img/pizza1.jpg);
+    background-size: cover;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.jumbotron p{
+    background-color: rgb(0,0,0,0.5);
+    color:white;
+}
+#about{
+    background-color: rgb(255, 255, 255,0.5);
+    border-style: solid;
+    text-align: center;
+}
+#award{
+    border-style: solid;
+    margin-top: 5px;
+    width: 250px;
+    height: 280px;
+}
+.cart{
+    border-style: solid;
+    border-radius: 10px;
+    background-color: skyblue;
+    text-align: center;
+    display: none;
+}
+.cart li{
+    color: black;
+    padding-top: -20px;
+    text-align: left;
+    display: block;
+
+}
+#new-pizza{
+    background-image: url(../img/pizza2.jpg);
+    background-size: cover;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+#gallery{
+    background-color: black;   
+}
+#gallery h6{
+    color: white;
+    text-align: center;
+}
+
+.browse{
+    text-align: center;
+}
+.pizzas img{
+    height: 200px;
+    width: 270px;
+    margin:10px;
+    border-style: solid;
+    border-color: white;
+    padding: 5px;   
+}
+.crusts{
+    margin-top: 10px;
+    display: none;
+    padding-bottom: 10px;
+}
+.crusts img{
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: white;
+    padding: 5px;   
+}
+.toppings{
+    margin-top: 10px;
+    display: none;
+    padding-bottom: 10px;
+}
+.toppings img{
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: white;
+    padding: 5px;  
+}
+.hover{
+    position: relative;
+    text-align: center;
+
+}
+.txt{
+    position: absolute;
+    background-color: rgb(255, 255, 255,0.5);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    display: none;
+    top: 40%;
+    right: 30%;
+    padding: 10px;
+    
+}
+#gallery h2{
+    text-align: center;
+    color: white;
+}
+#new-pizza h2{
+    text-align: center;
+    text-decoration:underline;
+}
+#new-pizza p{
+    text-align: center;
+    font-style: italic;
+}
+#tocart{
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+}
+#checkout{
+    background-color: #ff3c00;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    border-color: #ff3c00;
+
+}
+.callOrder{
+    background-color: green;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+   
+    
+}
+#contacts{
+    background-image:url(../img/contact.jpg);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-style: double;
+    border-width: 5px;
+
+}
+#name{
+    background-color: rgb(255, 255, 255,0.1);
+    color: black;
+}
+#feedback{
+    width: 600px;
+    background-color: rgb(255, 255, 255,0.1);
+    color: black;
+}
+.footer{
+    text-align: center;
+}
+.footer img{
+    height: 50px;
+}
