@@ -31,16 +31,16 @@ function totalPrice(){
     var large=1200;
     var regular=900;
     var small=500;
-    var size=document.getElementById("pizza-size").value;
+    var big=document.getElementById("pizza-size").value;
     var pizzaQty=parseInt(document.getElementById("quantity").value);
     var toppingQty=parseInt(document.getElementById("toppingQty").value);
      
-    if (size="large"){
+    if (big="large"){
         total=(large*pizzaQty)+((large/10)*toppingQty);
         document.getElementById("all").value="total:"+total;    
         return false;
     }
-    else if(size="regular"){
+    else if(big="regular"){
         total=(regular*pizzaQty)+((regular/10)*toppingQty);
         document.getElementById("all").value=" total:"+total;
         return false;
@@ -67,25 +67,34 @@ function deliver(){
   
 }
 function locationValidate(){
-  var location = $("select#location").val();
+  var checkBox=$("input#delivery").val();
+  var location = $("input#location").val();
   var telephone = $("input#tel").val();
-  if(location==""||telephone==""){
-    alert("enter valid details");
-    return false;
-  }
-  else{
-    message();
+  if (checkBox.checked==true&&location==""||telephone==""){
+      alert("enter valid details");
+    }
+  else {
+    return message();
+    
   }
 }
+
 function message(){
   
-  var checkBox = document.getElementById("delivery");
+  var checkBox = document.getElementById("delivery").value;
   if (checkBox.checked == true){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
   }
-  if (checkBox.checked == false){
+  if(checkBox.checked==false){
     alert("Thank you for shopping at Pizza Place.");
   }
+}
+function finish(){
+        resetFields();
+      $('ul#order li').remove();
+      $(".cart").hide();
+      $(".final").hide();
+      $(".location").hide();
 }
 
 //user logic
@@ -116,7 +125,7 @@ $(document).ready(function() {
       
     });
     $("#checkout").click(function() {
-        
+        totalPrice();
         $(".cart").show();
         $(".final").show();
        
@@ -127,16 +136,11 @@ $(document).ready(function() {
   $(document).ready(function() {
     $("#complete").click(function(event) {
       event.preventDefault();
-      locationValidate();
-      
-      resetFields();
-      $('ul#order li').remove();
-      $(".cart").hide();
-      $(".final").hide();
-      $(".location").hide();
-      
+      locationValidate();  
     });
   });
+
+
   //hover effect 
 
   $(document).ready(function() {
