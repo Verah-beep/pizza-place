@@ -73,7 +73,7 @@ function locationValidate(){
   var checkBox=$("input#delivery").val();
   var location = $("input#location").val();
   var telephone = $("input#tel").val();
-  if ((checkBox.checked==true)&&(location==""||telephone=="")){
+  if (checkBox.checked==true&&(location==""||telephone=="")){
       alert("enter valid details");
     }
   else{
@@ -85,6 +85,7 @@ function locationValidate(){
 }
 
 function message(){
+  
   var checkBox = document.getElementById("delivery");
   if (checkBox.checked == true){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
@@ -138,7 +139,7 @@ $(document).ready(function() {
       });  
   
   });
-
+  
 
 
   //hover effect 

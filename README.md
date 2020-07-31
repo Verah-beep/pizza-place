@@ -13,7 +13,7 @@ This is a fictional pizza restaurant website, based on a functional restaurant t
 4.launch via chrome or any other supported browsers.
 
 ## Link to live page
- (https://Vector254.github.io/place-place)
+ (https://Vector254.github.io/pizza-place)
 ## Known Bugs
 * none.
 ## Technologies Used
