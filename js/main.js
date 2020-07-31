@@ -107,6 +107,7 @@ $(document).ready(function() {
     $("form#new-pizza").submit(function(event) {
       event.preventDefault();
       validate();
+      $('#tocart').attr('disabled', true);
   
       var inputtedType = $("select#pizza-type").val();
       var inputtedQty = $("input#quantity").val();
@@ -138,6 +139,12 @@ $(document).ready(function() {
         
       });  
   
+  });
+
+  $(document).ready(function() {
+    $('#complete').on('click',function(){
+      $('#tocart').attr('disabled', false);
+    });
   });
   
 
