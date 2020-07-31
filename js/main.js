@@ -50,6 +50,7 @@ function deliver(){
     $(".location").show();  
   }
   if(checkBox.checked == false){
+    $('ul#order li').last().remove();
     $(".location").hide();
   }
   
