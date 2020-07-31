@@ -49,7 +49,19 @@ function deliver(){
     document.getElementById("all").value="Grand total:"+deliver;
     $(".location").show();  
   }
+  if(checkBox.checked == false){
+    $(".location").hide();
+  }
   
+}
+function message(){
+  var checkBox = document.getElementById("delivery");
+  if (checkBox.checked == true){
+    alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
+  }
+  if (checkBox.checked == false){
+    alert("Thank you for shopping with at Pizza Place.");
+  }
 }
 
 //user logic
@@ -86,7 +98,12 @@ $(document).ready(function() {
         
       });  
   });
-  
+  $(document).ready(function() {
+    $("#complete").click(function(event) {
+      event.preventDefault();
+      message();
+    });
+  });
   //hover effect 
 
   $(document).ready(function() {
