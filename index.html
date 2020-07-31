@@ -177,6 +177,61 @@
                 </div>
             </div>    
         </div>
+        <form id="new-pizza">
+            <h2>Place order below</h2>
+            <p>no idea what you want? visit our <a href="#gallery"><u>gallery</u></a></p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="data">  
+                    <label for="pizza-type">Type of pizza:</label>
+                    <select class="form-control"name="pizza-type" id="pizza-type">
+                        <option value="chicken tikka">chicken tikka</option>
+                        <option value="BBQ steak">BBQ steak</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="Cheese pizza">Cheese pizza</option>
+                        <option value="Neapolitan pizza">Cheese pizza</option>
+                        <option value="californian pizza">Cheese pizza</option>
+                    </select>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" value="1"min="1" max="20">    
+                    <label for="pizza-size">Size of pizza:</label>
+                    <select class="form-control" name="pizza-size" id="pizza-size">
+                        <option value="Large">Large @1200</option>
+                        <option value="Regular">Regular @900</option>
+                        <option value="Small">Small @500</option>
+                    </select>
+                    <label for="pizza-crust">Type of crust:</label>
+                    <select class="form-control" name="Pizza-crust" id="pizza-crust">
+                        <option value="Thin crust">Thin crust</option>
+                        <option value="Cheese-stuffed">Stuffed</option>
+                        <option value="Flatbread">Flatbread</option>
+                        <option value="Neapolitan">Neapolitan</option>
+                    </select>
+                    <label for="pizza-topping">Pizza topping:</label>
+                    <select class="form-control" name="pizza-topping" id="pizza-topping">
+                        <option value="Pinneaple">Pinneaple</option>
+                        <option value="Mushroom">Mushroom</option>
+                        <option value="Green peppers">Green peppers</option>
+                        <option value="Extra cheese">Extra cheese</option>
+                    </select>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" id="toppingQty" name="quantity" value="1"min="1" max="20">
+
+                      
+                    <button id="tocart" type="submit"  class="btn btn-success">add to cart</button>
+                    <input id="checkout"type="button" class="btn btn-success" value="Checkout" onclick="">
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cart">
+                        <h3>Your Order:</h3>
+                        <ul id="order">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
         
     
 </body>
