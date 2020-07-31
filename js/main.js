@@ -23,7 +23,7 @@ function validate(){
       var inputtedQty = $("input#quantity").val();
   if(inputtedType==""|| inputtedQty==""){
     alert("invalid input!");
-    
+    $('ul#order li').remove();
   }
 }
 
@@ -66,7 +66,19 @@ function deliver(){
   }
   
 }
+function locationValidate(){
+  var location = $("select#location").val();
+  var telephone = $("input#tel").val();
+  if(location==""||telephone==""){
+    alert("enter valid details");
+    return false;
+  }
+  else{
+    message();
+  }
+}
 function message(){
+  
   var checkBox = document.getElementById("delivery");
   if (checkBox.checked == true){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
@@ -115,7 +127,8 @@ $(document).ready(function() {
   $(document).ready(function() {
     $("#complete").click(function(event) {
       event.preventDefault();
-      message();
+      locationValidate();
+      
       resetFields();
       $('ul#order li').remove();
       $(".cart").hide();
