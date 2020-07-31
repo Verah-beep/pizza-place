@@ -17,6 +17,25 @@ function resetFields(){
     $("select#pizza-topping").val("");
       }
 
+function totalPrice(){
+    var large=1200.00;
+    var regular=900.00;
+    var small=500.00;
+    var size=document.getElementById("pizza-size").value;
+    var pizzaQty=parseInt(document.getElementById("quantity").value);
+    var toppingQty=parseInt(document.getElementById("toppingQty").value);
+      
+        if(size="large"){
+          total=(large*pizzaQty)+((large/10)*toppingQty);
+        }
+        else if(size="regular"){
+          total=(regular*pizzaQty)+((large/10)*toppingQty);
+        }
+        else if(size="small"){
+          total=(small*pizzaQty)+((small/10)*toppingQty);
+        }
+}
+
 //user logic
 $(document).ready(function() {
     $("form#new-pizza").submit(function(event) {
@@ -28,7 +47,7 @@ $(document).ready(function() {
       var inputtedCrust = $("select#pizza-crust").val();
       var inputtedTopping = $("select#pizza-topping").val();
       var inputtedTopQty=$("input#toppingQty").val();
-      var total=totalPrice();
+     
 
       var newPizza = new Pizza(inputtedType,inputtedQty, inputtedSize,inputtedCrust,inputtedTopping,inputtedTopQty);
   
@@ -38,7 +57,7 @@ $(document).ready(function() {
                             "<li><span class='order'>" +"CRUST:"+ newPizza.pizzaCrust+ "</span></li>",
                             "<li><span class='order'>" +"TOPPING:"+ newPizza.pizzaTopping+ "</span></li>",
                             "<li><span class='order'>" +"QUANTITY:"+ newPizza.toppingQty+ "</span></li>",
-                            "<li><span class='order'>" +"TOTAL:"+totalPrice.total+ "</span></li>",);
+                            );
       
       resetFields();
       
