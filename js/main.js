@@ -50,6 +50,7 @@ function deliver(){
     $(".location").show();  
   }
   if(checkBox.checked == false){
+    document.getElementById("all").value=" total:"+total;
     $('ul#order li').last().remove();
     $(".location").hide();
   }
@@ -61,7 +62,7 @@ function message(){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
   }
   if (checkBox.checked == false){
-    alert("Thank you for shopping with at Pizza Place.");
+    alert("Thank you for shopping at Pizza Place.");
   }
 }
 
@@ -81,8 +82,8 @@ $(document).ready(function() {
       var newPizza = new Pizza(inputtedType,inputtedQty, inputtedSize,inputtedCrust,inputtedTopping,inputtedTopQty);
   
       $("ul#order").append("<li><span class='order'>" +"TYPE:"+ newPizza.pizzaType+ "</span></li>",
-                            "<li><span class='order'>" +"QUANTITY:"+ newPizza.pizzaQty+ "</span></li>",
                             "<li><span class='order'>" +"SIZE:"+ newPizza.pizzaSize+ "</span></li>",
+                            "<li><span class='order'>" +"QUANTITY:"+ newPizza.pizzaQty+ "</span></li>",
                             "<li><span class='order'>" +"CRUST:"+ newPizza.pizzaCrust+ "</span></li>",
                             "<li><span class='order'>" +"TOPPING:"+ newPizza.pizzaTopping+ "</span></li>",
                             "<li><span class='order'>" +"QUANTITY:"+ newPizza.toppingQty+ "</span></li>",
