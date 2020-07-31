@@ -39,18 +39,18 @@ function totalPrice(){
     var toppingQty=parseInt(document.getElementById("toppingQty").value);
      
     
-  if(size="small"){
+  if(size=="small"){
         total=(small*pizzaQty)+((small/10)*toppingQty);
         document.getElementById("all").value=" total:"+total;
         return false;
     }
     
-  if(size="regular"){
+  if(size=="regular"){
       total=(regular*pizzaQty)+((regular/10)*toppingQty);
       document.getElementById("all").value=" total:"+total;
       return false;
   }
-  if (size="large"){
+  if (size=="large"){
     total=(large*pizzaQty)+((large/10)*toppingQty);
     document.getElementById("all").value="total:"+total;    
     return false;
