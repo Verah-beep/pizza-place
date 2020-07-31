@@ -25,6 +25,9 @@ function validate(){
     alert("invalid input!");
     $('ul#order li').remove();
   }
+  else {
+    return true;
+  }
 }
 
 function totalPrice(){
@@ -70,22 +73,23 @@ function locationValidate(){
   var checkBox=$("input#delivery").val();
   var location = $("input#location").val();
   var telephone = $("input#tel").val();
-  if (checkBox.checked==true&&location==""||telephone==""){
+  if ((checkBox.checked==true)&&(location==""||telephone=="")){
       alert("enter valid details");
     }
-  else {
-    return message();
+  else{
+    message();
+    finish();
     
   }
+
 }
 
 function message(){
-  
-  var checkBox = document.getElementById("delivery").value;
+  var checkBox = document.getElementById("delivery");
   if (checkBox.checked == true){
     alert("Your delivery is enroute. Thank you for shopping at Pizza Place.");
   }
-  if(checkBox.checked==false){
+  if(checkBox.checked == false){
     alert("Thank you for shopping at Pizza Place.");
   }
 }
@@ -132,13 +136,9 @@ $(document).ready(function() {
         
         
       });  
+  
   });
-  $(document).ready(function() {
-    $("#complete").click(function(event) {
-      event.preventDefault();
-      locationValidate();  
-    });
-  });
+
 
 
   //hover effect 
