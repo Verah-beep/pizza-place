@@ -108,6 +108,9 @@ body{
     border-color: white;
     padding: 5px;   
 }
+.info{
+    font-style: italic;
+}
 .crusts{
     margin-top: 10px;
     display: none;
