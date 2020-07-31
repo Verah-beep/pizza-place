@@ -5,7 +5,8 @@
 
 This is a fictional pizza restaurant website, based on a functional restaurant that wishes to expand it's buiseness into online sales and delivery. It was build with an aim to better comprehend DOM manipulation and javascript constructors and prototypes.
 
-
+## Screenshot
+![Alt text](/Home/Downloads/pizzaplace.png?raw=true "Pizza place")
 ## Setup/Installation Requirements
 1. Fork from github repository: https://github.com/Vector254/pizza-place.git
 2. Clone the same link to your local repository.
