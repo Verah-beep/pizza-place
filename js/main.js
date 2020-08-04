@@ -21,7 +21,7 @@ function resetFields(){
       }
 function validate(){
   var inputtedType = $("select#pizza-type").val();
-      var inputtedQty = $("input#quantity").val();
+  var inputtedQty = $("input#quantity").val();
   if(inputtedType==""|| inputtedQty==""){
     alert("invalid input!");
     $('ul#order li').remove();
@@ -29,6 +29,22 @@ function validate(){
   else {
     return true;
   }
+}
+function validateCart(){
+  var inputtedType = $("select#pizza-type").val();
+  var inputtedQty = $("input#quantity").val();
+  if(inputtedType==""|| inputtedQty==""){
+    alert("invalid input!");}
+  else{
+    checkOut();
+  
+  }
+
+}
+function checkOut(){
+  totalPrice();
+        $(".cart").show();
+        $(".final").show();
 }
 
 function totalPrice(){
@@ -131,16 +147,8 @@ $(document).ready(function() {
       
       
       
-    });
-    $("#checkout").click(function() {
-        totalPrice();
-        $(".cart").show();
-        $(".final").show();
-       
+    });      
         
-        
-      });  
-  
   });
 
   //hover effect 
