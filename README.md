@@ -1,9 +1,9 @@
 #  PIZZA PLACE
 #### By 
-**Victor Nduati**
+**Vera Vector**
 ## Description
 
-This is a fictional pizza restaurant website, based on a functional restaurant that wishes to expand it's buiseness into online sales and delivery. It was build with an aim to better comprehend DOM manipulation and javascript constructors and prototypes.
+This is a fictional pizza restaurant website based on a functional restaurant that wishes to expand its business into online sales and delivery. It was built to better comprehend DOM manipulation and Javascript constructors and prototypes.
 
 ## Screenshot
 ![screenshot](img/pizzaplace.png?raw=true)
@@ -23,7 +23,7 @@ This is a fictional pizza restaurant website, based on a functional restaurant t
  3. Github for code hosting
  4. Chrome browser for testing and launching
 ## Support and contact details
-incase of any issues unadressed here or for general comments, contact **ochrist7@gmail.com**
+incase of any issues unadressed here or for general comments, contact **veronikauma75@gmail.com**
 ### License
 MIT License
 
